@@ -64,6 +64,13 @@ class FragmentationTest extends TestCase
       unset($expected);
       unset($actual);
     }
+    /**
+     * Just check if the Fragmentation has no syntax error
+     *
+     * This is just a simple check to make sure your library has no syntax error. This helps you troubleshoot
+     * any typo before you even use this library in a real project.
+     *
+     */
 
     public function testFragByArrays()
     {
@@ -119,6 +126,13 @@ class FragmentationTest extends TestCase
         unset($expected);
         unset($actual);
     }
+    /**
+     * Just check if the Fragmentation has no syntax error
+     *
+     * This is just a simple check to make sure your library has no syntax error. This helps you troubleshoot
+     * any typo before you even use this library in a real project.
+     *
+     */
     public function fragUpgradeTest(){
 
     }
