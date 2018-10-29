@@ -17,6 +17,6 @@
 		"phpunit/phpunit": "6.*"
     },
     "autoload": {
-        "psr-4": { "VendorName\\PackageName\\": "src/" }
+        "psr-4": { "judison1\\dbfrag\\": "src/" }
     }
 }
