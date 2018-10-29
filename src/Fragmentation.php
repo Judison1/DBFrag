@@ -99,6 +99,7 @@ class Fragmentation
         $data_frag['id'] = $data['id'];
         foreach ($data as $key => $value){
             if ($key != 'id'){
+                $data_frag[$key] = $value;
                 $data_frag[$key.$this->up_name] = $now;
             }
         }
