@@ -1,5 +1,5 @@
 {
-    "name": "Judison1/DBFrag",
+    "name": "judison1/db-frag",
     "description": "biblioteca para sincronizar banco de dados distribuídos fragmentados.",
     "keywords": ["template", "composer", "package"],
     "license": "MIT",
