@@ -1,5 +1,5 @@
 {
-    "name": "judison1/dbfrag",
+    "name": "Judison1/DBFrag",
     "description": "biblioteca para sincronizar banco de dados distribuídos fragmentados.",
     "keywords": ["template", "composer", "package"],
     "license": "MIT",
@@ -17,8 +17,6 @@
 		"phpunit/phpunit": "6.*"
     },
     "autoload": {
-        "psr-4": {
-            "Judison1\\DBfrag\\": "src/"
-        }
+        "psr-4": { "VendorName\\PackageName\\": "src/" }
     }
 }

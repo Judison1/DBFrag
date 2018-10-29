@@ -1,6 +1,6 @@
 <?php 
 use PHPUnit\Framework\TestCase;
-
+use Judison1\DBFrag\Fragmentation;
 /**
 *  Corresponding Class to test Fragmentation class
 *
@@ -11,7 +11,7 @@ use PHPUnit\Framework\TestCase;
 */
 class FragmentationTest extends TestCase
 {
-	
+
   /**
   * Just check if the Fragmentation has no syntax error
   *
@@ -21,11 +21,10 @@ class FragmentationTest extends TestCase
   */
   public function testIsThereAnySyntaxError()
   {
-	$var = new Judison1\DBFrag\Fragmentation;
+	$var = new Fragmentation();
 	$this->assertTrue(is_object($var));
 	unset($var);
   }
-  
   /**
   * Just check if the Fragmentation has no syntax error
   *
@@ -33,10 +32,37 @@ class FragmentationTest extends TestCase
   * any typo before you even use this library in a real project.
   *
   */
-  public function testMethod1()
+  public function testFragByArray()
   {
-	$var = new Judison1\DBFrag\Fragmentation;
-	$this->assertTrue($var->method1("hey") == 'Hello World');
-	unset($var);
-  } 
+
+      $frag = new Fragmentation();
+      $user1  = array(
+          'id' => 1,
+          'updated_at' => '2018-10-24 14:18:17',
+          'nome' => "John Doe",
+          'nome_updated_at' => '2018-10-24 14:18:17',
+          'email' => "johndoe@email.com",
+          'email_updated_at' => '2018-10-24 12:18:17',
+          'senha' => "johndoe@email.com",
+          'senha_updated_at' => '2018-10-24 12:18:17',
+          'cpf' => '155.555.258-52',
+          'cpf_updated_at' => '2018-10-24 14:18:17',
+          'rg' => '154652',
+          'rg_updated_at' => '2018-10-24 14:18:17'
+      );
+      $expected = array(
+          'id' => 1,
+          'updated_at' => '2018-10-24 14:18:17',
+          'nome' => "John Doe",
+      );
+
+      $actual = $frag->fragByArray('2018-10-24 12:18:17', $user1, ['usuario']);
+
+      $this->assertEquals($expected,$actual);
+
+      unset($frag);
+      unset($user1);
+      unset($expected);
+      unset($actual);
+  }
 }
