@@ -1,6 +1,6 @@
 <?php 
 use PHPUnit\Framework\TestCase;
-use Judison1\DBFrag\Fragmentation;
+use judison1\dbfrag\Fragmentation;
 /**
 *  Corresponding Class to test Fragmentation class
 *

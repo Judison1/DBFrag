@@ -1,4 +1,4 @@
-<?php namespace Judison1\DBFrag;
+<?php namespace judison1\dbfrag;
 
 
 /**
