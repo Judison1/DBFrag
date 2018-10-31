@@ -10,7 +10,7 @@
 *  @author Judison Godinho
 */
 
-
+use Exception;
 class Fragmentation
 {
 
